@@ -8,6 +8,7 @@ import rotasDeMetas from './rotas/rotasDeMetas.js';
 import rotasDeDespesas from './rotas/rotasDeDespesas.js';
 
 const app = Express();
+app.use(Express.json())
 app.use(logger('dev'));
 
 app.use('/usuarios', rotasDeUsuarios);
