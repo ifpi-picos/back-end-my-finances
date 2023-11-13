@@ -1,13 +1,15 @@
 import Express from 'express';
 import logger from 'morgan';
+import cors from 'cors';
 import rotasDeUsuarios from  './rotas/rotasDeUsuarios.js';
 import rotasDeContas from './rotas/rotasDeContas.js';
-import rotasDeOrcamento from './rotas/rotasDeOrcamento.js';
-import rotasDeRelatorios from './rotas/rotasDeRelatorios.js';
-import rotasDeMetas from './rotas/rotasDeMetas.js';
-import rotasDeDespesas from './rotas/rotasDeDespesas.js';
+import rotasDeOrcamento from './rotas/rotaDeOrcamento.js';
+import rotasDeRelatorios from './rotas/rotaDeRelatorios.js';
+import rotasDeMetas from './rotas/rotaDeMetas.js';
+import rotasDeDespesas from './rotas/rotaDeDespesas.js';
 
 const app = Express();
+app.use(cors());
 app.use(Express.json())
 app.use(logger('dev'));
 
